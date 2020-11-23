@@ -7,11 +7,10 @@ module.exports = {
   },
   devServer: {
     hot: false,
-    contentBase: path.join(__dirname, 'src'),
+    // contentBase: path.join(__dirname, '/dist'),
     compress: true,
     port: 3010,
     watchContentBase: true,
-    publicPath: '/assets/',
   },
   module: {
     rules: [
@@ -29,6 +28,10 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
