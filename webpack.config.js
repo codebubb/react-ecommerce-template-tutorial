@@ -6,12 +6,8 @@ module.exports = {
     filename: 'index.bundle.js',
   },
   devServer: {
-    hot: false,
-    contentBase: path.join(__dirname, 'src'),
-    compress: true,
     port: 3010,
     watchContentBase: true,
-    publicPath: '/assets/',
   },
   module: {
     rules: [
